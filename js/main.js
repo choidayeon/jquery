@@ -49,12 +49,20 @@ $(function(){
 
 	var card = $(".container #section");
 	var cardPos = card.offset().top;
+	var menu = $("#header")	
+	var menuPos = menu.offset().top;	
 
 	$(window).scroll(function(){
 		var scrollY = window.pageYOffset;
 
+		if(scrollY > menuPos){
+			menu.addClass("fixed");
+		}else{
+			menu.removeClass("fixed");
+		}
+
 		if(scrollY>cardPos-1000){
-			card.stop().slideDown();
+			card.stop().slideDown(300);
 		}
 	});
 });
