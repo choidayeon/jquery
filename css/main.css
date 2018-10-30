@@ -20,15 +20,32 @@ header:after{content:"";display:block;clear:both;}
 .banner{width:200%;position:absolute;height:585px;}
 .banner:after{content:"";display:block;clear:both;}
 .banner li{width:1940px;height:585px;float:left;position:relative;}
+.banner li:first-child{background:url(../images/main_img_02.jpg);}
+.banner li:last-child{background:url(../images/main_img_03.jpg);}
 
 .bn1{width:100%;text-align:center;position:absolute;top:100px;color:#fff;}
 .bn1>h3{font-size:60px;}
 .bn1>p{font-size:20px;margin-top:20px;}
 .bn1>button{border:none;padding:15px 30px;border-radius:25px;background:#1428a0;color:#fff;margin-top:50px;}
+.bn1>button:hover{background:#fff;color:#1428a0;font-weight:bold;}
 
-.btn{width:100%;position:absolute;top:250px;background:#fff;}
-.btn:after{content:"";display:block;clear:both;}
-.btn>span{float:left;position:relative;}
-.btn>span>img{width:22px;height:42px;cursor:pointer;}
-#prev_btn{position:absolute;left:80px;}
-#next_btn{position:absolute;left:1800px;}
+.btn{position:absolute;top:250px;width:100%;position:relative;}
+.btn>button{background:url(../images/infra_navi_icon.png) no-repeat 50% 50%;text-indent:-9999px;border-style:none;width:80px;height:80px;border:2px solid #fff;}
+.btn>.prev{position:absolute;left:250px;}
+.btn>.next{position:absolute;left:1500px;transform:rotate(180deg);}
+
+.container{width:100%;background:#eee;height:600px;}
+.container h2{width:1200px;margin:0 auto;text-align:center;padding:80px 0 60px;font-size:35px;color:#636363;}
+#section{width:1200px;margin:0 auto;display:none;}
+#section:after{content:"";display:block;clear:both;}
+#section .card{width:32.32%;float:left;background:#fff;display:block;margin-right:1%;margin-bottom:30px;padding:30px;}
+#section .card:after{content:"";display:block;clear:both;}
+#section .card:hover{box-shadow:10px 10px 10px 10px #eee;cursor: pointer}
+#section div.card:last-child{margin-right:0;}
+
+.card>div{float:left;}
+.card>.icon{width:35%;height:90px;text-indent:-9999px;}
+.card>.card_body{width:65%;}
+.card>.card_body h4{padding-bottom:10px;color:#1428a0;}
+.card>.card_body p{color:#636363;}
+
