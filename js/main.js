@@ -51,6 +51,8 @@ $(function(){
 	var cardPos = card.offset().top;
 	var menu = $("#header")	
 	var menuPos = menu.offset().top;	
+	var news = $(".news_wrap");
+	var newsPos = news.offset().top;
 
 	$(window).scroll(function(){
 		var scrollY = window.pageYOffset;
@@ -64,5 +66,32 @@ $(function(){
 		if(scrollY>cardPos-1000){
 			card.stop().slideDown(300);
 		}
+
+		if(scrollY>newsPos-200){
+			news.find("div").stop().slideDown();
+		}
+	});
+
+	var smenu = $("#menu>li");
+	var contents = $("#wrap>.scroll");
+
+	smenu.click(function(){
+		$("html,body").stop().animate({scrollTop:contents.eq($(this).index()).offset().top-110});
+	});
+
+	$(window).scroll(function(){
+		var sct = window.pageYOffset;
+
+		contents.each(function(index){
+			if(sct>=$(this).offset().top-110){
+				smenu.find(".amenu").removeClass("on");
+				smenu.find(".amenu").eq(index).addClass("on");
+			}
+		});
+	});
+
+	$("#top").click(function(e){
+		e.preventDefault();
+		$("html,body").stop().animate({scrollTop:0},300)
 	});
 });
