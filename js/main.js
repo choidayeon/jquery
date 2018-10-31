@@ -76,14 +76,14 @@ $(function(){
 	var contents = $("#wrap>.scroll");
 
 	smenu.click(function(){
-		$("html,body").stop().animate({scrollTop:contents.eq($(this).index()).offset().top-110});
+		$("html,body").stop().animate({scrollTop:contents.eq($(this).index()).offset().top-90});
 	});
 
 	$(window).scroll(function(){
 		var sct = window.pageYOffset;
 
 		contents.each(function(index){
-			if(sct>=$(this).offset().top-110){
+			if(sct>=$(this).offset().top-90){
 				smenu.find(".amenu").removeClass("on");
 				smenu.find(".amenu").eq(index).addClass("on");
 			}
