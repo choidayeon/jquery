@@ -94,4 +94,16 @@ $(function(){
 		e.preventDefault();
 		$("html,body").stop().animate({scrollTop:0},300)
 	});
+	
+	var page = $("div.container").offset().top;
+
+	$(window).scroll(function(){
+		var scrollYY = window.pageYOffset;
+
+		if(scrollYY>page){
+			$("#top").slideDown(300);
+		}else{
+			$("#top").slideUp(300);
+		}
+	});	
 });
